@@ -12,19 +12,20 @@ function generatePassword(passwordLength,specialChar,numericChar,lowerChar,upper
 
 
 
-
+ // set up arrays for each commit choice
  var  specialCharArray = ["!", "#", "$", "%", "&", "(", ")", "*", "+", "-", ":", ";", "<", "=", ">", "?", "@", "[", "]"];
  var  numericCharArray = [1,2,3,4,5,6,7,8,9,0];
  var  lowerCharArray   = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
  var  upperCharArray   = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
 
-
+ // variables
  var allArray = [];
  var counter  = 0;
  var pword    = "";
  var p        = "";
 
 
+  // create  multidimensional allArray based on users selections
  if(specialChar == true) {
   
   allArray.push(specialCharArray)
@@ -72,14 +73,13 @@ return pword;
 }
 
 
-
-
 // Write password to the #password input
 function writePassword() {
 
 
   passwordLength = prompt("How many characters would you like you password to contain?");
    
+  // pw lenght check
   if (passwordLength < 8 ) {
     alert("You must choose a length of at least 8 characters");    
   } 
@@ -89,7 +89,7 @@ function writePassword() {
   else {
     console.log("length: " + passwordLength);
 
-
+    // get users selections
     specialChar = confirm("Click OK to confirm to include special characters.");  
     console.log("special: " + specialChar);
 
