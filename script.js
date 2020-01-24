@@ -44,7 +44,7 @@ function generatePassword(passwordLength,specialChar,numericChar,lowerChar,upper
   counter++;
 }
 
-if (counter == 0) {alert("You must choose some character characteristics");  }
+if (counter == 0) {alert("You must choose some password character characteristics.");  }
 
 
 // loop through the password length
